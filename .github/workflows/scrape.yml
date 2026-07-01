@@ -1,0 +1,51 @@
+name: Scrape Hyogo Traffic Data
+
+on:
+  schedule:
+    # 07:00 JST = 22:00 UTC (previous day)
+    - cron: '0 22 * * *'
+    # 13:00 JST = 04:00 UTC
+    - cron: '0 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: scraper/package-lock.json
+
+      - name: Install dependencies
+        working-directory: scraper
+        run: npm ci
+
+      - name: Build
+        working-directory: scraper
+        run: npm run build
+
+      - name: Run scraper
+        working-directory: scraper
+        env:
+          OUTPUT_DIR: ${{ github.workspace }}/docs
+        run: node dist/index.js
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/traffic.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update traffic data [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+            git push
+          fi

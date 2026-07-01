@@ -1,0 +1,8 @@
+scraper/node_modules/
+scraper/dist/
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+*.iml
+.idea/
