@@ -1,18 +1,16 @@
 package com.example.policechecker.widget
 
 import android.content.Context
-import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.glance.*
-import androidx.glance.action.actionStartActivity
 import androidx.glance.appwidget.GlanceAppWidget
 import androidx.glance.appwidget.provideContent
 import androidx.glance.layout.*
 import androidx.glance.text.*
-import com.example.policechecker.MainActivity
+import androidx.glance.unit.ColorProvider
 import com.example.policechecker.data.TrafficRepository
 import com.example.policechecker.location.AreaLocationResolver
 import com.example.policechecker.location.StaticAreaLocationResolver
