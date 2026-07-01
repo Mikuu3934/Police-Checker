@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">兵庫取締りチェッカー</string>
+    <string name="widget_description">兵庫県警 交通取締り情報ウィジェット</string>
+    <string name="disclaimer">※取締りは予告なく変更・中止される場合があります。参考情報としてご利用ください。</string>
+    <string name="loading">データ読み込み中…</string>
+    <string name="no_data">本日のデータなし</string>
+    <string name="location_unavailable">位置情報なし（距離計算スキップ）</string>
+    <string name="permission_rationale">現在地から近い取締りポイントを表示するために位置情報を使用します。</string>
+</resources>
