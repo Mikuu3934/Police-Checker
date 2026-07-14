@@ -1,56 +1,6 @@
 {
-  "updatedAt": "2026-07-01T23:35:38+09:00",
+  "updatedAt": "2026-07-14T15:10:33+09:00",
   "days": [
-    {
-      "date": "2026-06-19",
-      "weekday": "金",
-      "entries": []
-    },
-    {
-      "date": "2026-06-20",
-      "weekday": "土",
-      "entries": []
-    },
-    {
-      "date": "2026-06-21",
-      "weekday": "日",
-      "entries": []
-    },
-    {
-      "date": "2026-06-22",
-      "weekday": "月",
-      "entries": []
-    },
-    {
-      "date": "2026-06-23",
-      "weekday": "火",
-      "entries": []
-    },
-    {
-      "date": "2026-06-24",
-      "weekday": "水",
-      "entries": []
-    },
-    {
-      "date": "2026-06-25",
-      "weekday": "木",
-      "entries": []
-    },
-    {
-      "date": "2026-06-26",
-      "weekday": "金",
-      "entries": []
-    },
-    {
-      "date": "2026-06-27",
-      "weekday": "土",
-      "entries": []
-    },
-    {
-      "date": "2026-06-29",
-      "weekday": "月",
-      "entries": []
-    },
     {
       "date": "2026-07-04",
       "weekday": "木",
